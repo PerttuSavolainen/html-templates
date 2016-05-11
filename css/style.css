@@ -1,0 +1,269 @@
+/* Colors */
+
+.color-bg-1 {
+    background: aquamarine;
+}
+
+.color-1 {
+    color: aquamarine;
+}
+
+.color-bg-2 {
+    background: #dff0d8;
+}
+
+.color-2 {
+    color: #dff0d8;
+}
+
+.color-bg-white {
+    background: #fff;
+}
+
+.color-white {
+    color: #fff;
+}
+
+
+
+/* Buttons */
+
+.bottom-btn {
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    bottom: calc(-5rem / 2);
+    left: calc(50% - 2.5rem);
+    cursor: pointer;
+}
+
+.round-btn {  
+    border-radius: 50%; 
+}
+
+.hover-btn-1 span, .hover-btn-2 span, .hover-btn-3 span {
+    color: #999;
+    font-size: 3rem;
+    position: absolute;
+    top: calc(50% - (3rem/2));
+    left: calc(50% - (3rem/2));
+}
+
+/* first btn-thing stuff */
+
+.hover-btn-1 {
+    
+}
+
+.hover-btn-1 span {
+    -webkit-animation: rotate 2s linear infinite;
+    animation: rotate 2s linear infinite;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.hover-btn-1:hover span {
+   -webkit-animation-play-state: running; 
+   animation-play-state: running; 
+}
+
+@keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);    
+        -moz-transform: rotate(0deg);    
+        transform: rotate(0deg);    
+    }
+    to {
+        -webkit-transform: rotate(360deg); 
+        -moz-transform: rotate(360deg); 
+        transform: rotate(360deg); 
+    }
+}
+
+/* second btn-thing stuff */
+
+.hover-btn-2 {
+    animation: pulse 1s ease-in-out 1 forwards;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.box-lift {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #888;
+    
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    transform: translateY(100%); 
+    
+    animation: lift 0.75s ease-out 1s 1 forwards;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    
+}
+
+.box-push {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #888;
+    
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%); 
+    
+    animation: push 0.75s ease-out 1.75s 1 forwards;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    
+}
+
+.hover-col-anim:hover .hover-btn-2,
+.hover-col-anim:hover .box-push,
+.hover-col-anim:hover .box-lift {
+   -webkit-animation-play-state: running; 
+   animation-play-state: running; 
+}
+
+@keyframes pulse {
+    from {    
+        transform: scale(1);    
+    }
+    to {
+        transform: scale(5);
+    }
+}
+
+@keyframes lift {
+    from {    
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        transform: translateY(100%);   
+    }
+    to {
+        -webkit-transform: translateY(50%);
+        -moz-transform: translateY(50%);
+        transform: translateY(50%);
+    }
+}
+
+@keyframes push {
+    from {    
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        transform: translateY(-100%);   
+    }
+    to {
+        -webkit-transform: translateY(-75%);
+        -moz-transform: translateY(-75%);
+        transform: translateY(-75%);
+    }
+}
+
+/* third btn-thing stuff */
+
+.anim-of {
+    animation: overflow 0.1s linear 0.5s 1 forwards;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.hover-btn-3 {
+    animation: move 1s ease-in-out 1 forwards;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.anim-of:hover,
+.anim-of:hover .hover-btn-3 {
+   -webkit-animation-play-state: running; 
+   animation-play-state: running; 
+}
+
+@keyframes overflow {
+    from {
+        overflow: visible;
+    }
+    to {
+        overflow: hidden;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0%) scale(1);
+    }
+    50% {
+        transform: translateY(-100%) scale(0.9);
+    }
+    100% {
+        transform: translateY(0%) scale(0.85);
+    }
+}
+
+/* Other stuff */
+.square {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+}
+
+.btn-margin-bottom {
+    margin-bottom: 3.5rem;
+}
+
+.of-hidden {
+    overflow: hidden;   
+}
+
+.light-shadow {
+    -webkit-box-shadow: 0 0 6rem rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 0 6rem rgba(0,0,0,0.25);
+    -o-box-shadow: 0 0 6rem rgba(0,0,0,0.25);
+    box-shadow: 0 0 6rem rgba(0,0,0,0.25);
+}
+
+.trans-hor-centered {
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.trans-vert-centered {
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.trans-centered {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.trans-hor-minus-100 {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    transform: translateX(-100%);    
+}
+
+.trans-hor-100 {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    transform: translateX(100%);    
+}
+
+.trans-vert-top-100 {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%);    
+}
+
+.trans-vert-bottom-100 {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    transform: translateY(100%);    
+}
